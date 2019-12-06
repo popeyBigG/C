@@ -4,7 +4,7 @@
 
  int void main() {
 
-    printf("total   =  100%\t\nIVA     =   18%\t\nURS     =   10%\t\n~~~~~~~~~~~~~~~\t\nLIQUIDO =   68%\n");
+    printf("total\t=100%\t\nIVA\t=18%\t\nURS\t=10%\t\n~~~~~~~~~~~~~~~\t\nLIQUIDO\t=68%\n");
 
     return 0;
 }
