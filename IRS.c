@@ -5,7 +5,6 @@
 /*Casos nao existentes (9%)*/
 
 #include <stdio.h>
-#include <conio.h>
 #include <time.h>
 
 void delay(int milliseconds);
@@ -25,7 +24,7 @@ char nome() {
     char nome[256];
 
     printf("Insira seu nome: ");
-    scanf("%s", &nome);
+    scanf("%s", nome);
     getchar(); 
 
     return nome;
@@ -33,11 +32,13 @@ char nome() {
 
 char pergunta() {
 
-    system("cls");
+    system("clear");
+    char nome[256];
     char c;
-    char estadoC[256] = "Unknown";
     
     printf("Selecione o seu estado civil:\n");
+
+    printf("Digite a sigla conforme o estado civil e pressione ENTER:\n");
 
     printf(R"EOF(
 +----------------------------------+---------+
@@ -54,22 +55,25 @@ char pergunta() {
     c = getchar(); 
     
     if (c == 's' || c == 'S') {
-        printf("\nS foi apertado");
+        system("clear");
+        printf("\nNome: %s\nEstado civil: Solteiro\nTaxa: 25%\n", nome);
     } else if (c == 'c' || c == 'C') {
-        printf("\nC foi apertado\n");
+        system("clear");
+        printf("\nNome: %s\nEstado civil: Casado\nTaxa: 22%\n", nome);
     } else if (c == 'u' || c == 'U') {
-        printf("\nU foi apertado\n");
+        system("clear");
+        printf("\nNome: %s\nEstado civil: Uniao\nTaxa: 19%\n", nome);
     } else if (c == 'd' || c == 'D') {
-        printf("\nD foi apertado\n");
+        system("clear");
+        printf("\nNome: %s\nEstado civil: Divorciado\nTaxa: 18%\n", nome);
     } else if (c == 'o' || c == 'O') {
-        printf("\nO foi apertado\n");
+        system("clear");
+        printf("\nNome: %s\nNome: %s\nEstado civil: Outro\nTaxa: 9%\n", nome);
     } else {
         printf("Por favor, pressione uma tecla valida!\n");
         delay(1000);
         pergunta();
     }
-
-    printf("\nSelecionado: (%s)\n", estadoC);
 
     return(pergunta); 
 }
@@ -84,9 +88,8 @@ char main() {
     if (escolha == 'Y') {
         nome();
         pergunta();
-        system("pause");
     } else {
-        system("pause");
+        
     }
 
     return 0;
