@@ -41,7 +41,7 @@ int main() {
     taxa = calctaxa(salarioBruto);
 
     /*Output do resultado*/
-    printf("\nNome: %s\nTaxa: %f\nSalário Líquido: %f\n", nome, taxa, calc(salarioBruto, taxa));
+    printf("\nNome: %s\nTaxa: %.2f%\nSalário Líquido: %.2f\n", nome, taxa, calc(salarioBruto, taxa));
 
     return 0;
 }
