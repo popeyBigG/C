@@ -17,28 +17,11 @@ int numero(void) {
                 }
 }
 
-int main(void) {
+char nome[256];
+int idade;
 
-    int escolha;
+int nomeIdade(void) {
 
-    char nome[256];
-    int idade;
-    int num1, num2;
-    int soma;
-
-    //Menu//
-    printf("Escolha uma opção correspondente aos numeros: \n");
-    printf("1 - Formadores\t2 - Alunos\n3 - Cursos\t4 - Apoios\n5 - Sair\n");
-
-    //Input escolha//
-    printf("\nEscolha: ");
-    scanf(" %d", &escolha);
-
-    switch (escolha) {
-        case 1:
-                printf("Menu formadores selecionado\n");
-                break;
-        case 2:
                 printf("Insira o nome: ");
                 scanf("%s", nome);
 
@@ -46,12 +29,13 @@ int main(void) {
                 scanf(" %d", &idade);
 
                 printf("Aluno %s tem %d anos\n", nome, idade);
-                break;
-        case 3: 
-                numero();
-                break;
-        case 4:
-                printf("Insire num1: ");
+}
+
+int num1, num2;
+int soma;
+
+int calcSoma(void) {
+                 printf("Insire num1: ");
                 scanf("%d", &num1);
 
                 printf("Insire num2: ");
@@ -62,12 +46,42 @@ int main(void) {
                 if (soma > 20) {
                 printf("Soma: %d\tAtingiu limite!\n", soma);
                 } else { printf("Soma: %d\n", soma); }
-                break;
+}
 
+char menu(void) {
+    //Menu//
+    printf("Escolha uma opção correspondente aos numeros: \n");
+    printf("1 - Formadores\t2 - Alunos\n3 - Cursos\t4 - Apoios\n5 - Sair\n");
+}
+
+int escolha;
+
+int escolhas(void) {
+     //Input escolha//
+    printf("\nEscolha: ");
+    scanf(" %d", &escolha);
+
+    switch (escolha) {
+        case 1:
+                printf("Menu formadores selecionado\n");
+                break;
+        case 2:
+                nomeIdade();
+                break;
+        case 3: 
+                numero();
+                break;
+        case 4:
+                calcSoma();
+                break;
         default: 
                 printf("Terminando o programa...\n");
                 break;
     }
+}
 
+int main(void) {
+
+    menu();
+    escolhas();
 } 
-
