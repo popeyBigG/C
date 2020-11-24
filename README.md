@@ -1,3 +1,3 @@
-# C exerciceses
+C programming made at school
 
-![C Language](https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png)
+![C Language](https://img.icons8.com/color/452/c-programming.png)
