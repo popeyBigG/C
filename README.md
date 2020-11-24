@@ -1,3 +1,3 @@
-# Colegio
+# C exerciceses
 
-![C Language](https://anam-it.com/wp-content/uploads/2019/05/Clanguage-1024x341.png)
+![C Language](https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png)
